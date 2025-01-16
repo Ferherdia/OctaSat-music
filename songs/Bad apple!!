@@ -1,0 +1,15 @@
+import pretty_midi
+import csv
+
+# Cargar el archivo MIDI
+midi_data = pretty_midi.PrettyMIDI('TOUHOU - Bad Apple!!.mid')
+
+# Abrir un archivo CSV para escribir
+with open('output.csv', mode='w', newline='') as csv_file:
+    csv_writer = csv.writer(csv_file)
+    csv_writer.writerow(['Nota', 'Tiempo', 'Velocidad']) # Encabezados
+
+    # Iterar sobre las notas en cada instrumento
+    for instrument in midi_data.instruments:
+        for note in instrument.notes:
+            csv_writer.writerow([note.pitch, note.start, note.velocity])
