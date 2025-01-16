@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     try:
         # Play the songs in sequence
-        player.play_song('tetris')  # Play the Tetris theme song
+        player.play_song('TOUHOU - Bad Apple!!.mid')  # Play the Tetris theme song
         player.play_song('scale')   # Play a simple scale
         player.play_song('simple_song')  # Play another sample song
         player.play_song('twinkle')  # Play the new Twinkle song
